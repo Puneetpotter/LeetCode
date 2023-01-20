@@ -4,11 +4,6 @@ public:
         
         unordered_map <char, int> m;
         
-        for(int i = 'a'; i < 'z'; i++){
-            
-            m[i] = 0;
-        }
-        
         for(int i = 0; i < s.size(); i++){
             
             m[s[i]]++;
