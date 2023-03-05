@@ -10,18 +10,25 @@
 class Solution {
 public:
     int guessNumber(int n) {
-        long long int beg=1;
-        long long end=n;
-        long long mid=end-(end-beg)/2;
-        while(beg<=end){
-            if(guess(mid)==0)
+        
+        int beg = 1;
+        int mid = beg - (beg - n)/2;
+        
+        while(beg <= n){
+            
+            if(guess(mid) == 0)
                 return mid;
-            else if(guess(mid)==-1)
-                end=mid-1;
+            
+            else if(guess(mid) == -1)
+                n = mid - 1;
+            
             else
-                beg=mid+1;
-            mid=end-(end-beg)/2;
+                beg = mid + 1;
+            
+            mid = beg - (beg - n)/2;
+            
         }
-        return 1;
+       
+        return 0;
     }
 };
