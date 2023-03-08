@@ -8,11 +8,11 @@ public:
         if(s.size() != t.size())
             return false;
         
-        for(int i = 0; i < s.size(); i++)
+        for(int i = 0; i < s.size(); i++){
             m[s[i]]++;
-        
-        for(int i = 0; i < t.size(); i++)
             m1[t[i]]++;
+        }
+            
         
         for(int i = 0; i < t.size(); i++){
             
