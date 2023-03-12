@@ -5,7 +5,7 @@ public:
         int s = 1;
         int e = n;
         long int mid = s + (e - s) / 2;
-        //long int ans;
+        long int ans;
         
         while(s <= e){
             
@@ -14,6 +14,7 @@ public:
             
             if((mid * (mid + 1))/2 < n){
                 
+                ans = mid;
                 s = mid + 1;
                 
             }
@@ -24,6 +25,6 @@ public:
             mid = s + (e - s) / 2;
         }
         
-        return e;
+        return ans;
     }
 };
