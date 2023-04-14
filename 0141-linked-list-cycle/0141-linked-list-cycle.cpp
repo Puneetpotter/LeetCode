@@ -10,19 +10,24 @@ class Solution {
 public:
     bool hasCycle(ListNode *head) {
         
-        if(head == NULL || head -> next == NULL)
+        //Floyd Detection Approach - Self
+        
+        if(head == NULL or head -> next == NULL)
             return false;
         
-        unordered_map <ListNode*, int> m;
+        ListNode * slow = head;
+        ListNode * fast = head;
         
-        while(head != NULL){
+        while(fast != NULL and slow != NULL){
             
-            if(m[head] != 0)
+            slow = slow -> next;
+            fast = fast -> next;
+            
+            if(fast != NULL)
+                fast = fast -> next;
+            
+            if(slow == fast)
                 return true;
-            
-            m[head]++;
-            head = head -> next;
-            
             
         }
         
