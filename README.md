@@ -2,7 +2,7 @@
 - Collection of LeetCode questions with solutions to ace the coding interview! 
 
 - Both questions and solutions are updated in this repository.
-- CPP Solutions
+- CPP and SQL (Database) Solutions 
 
 ## How to find your question ?
 
