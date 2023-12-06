@@ -31,6 +31,8 @@ private:
         solve(root -> left, targetSum, count, path);
         solve(root -> right, targetSum, count, path);
         
+        path.pop_back();
+        
     }
     
 public:
